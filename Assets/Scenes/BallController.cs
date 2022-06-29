@@ -3,24 +3,24 @@ using UnityEngine.UI;
 
 public class BallController : MonoBehaviour
 {
-    public Vector2 speed;
-    public Vector2 resetPosition;
+    public Vector3 speed;
+    public Vector3 resetPosition;
 
-    private Rigidbody2D rig;
+    private Rigidbody rig;
     public Image iconSpeedUp;
     public int jumlahDurasi;
     public float durasi;
 
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
-        //rig.velocity = speed;
+        rig = GetComponent<Rigidbody>();
+        rig.velocity = speed;
         durasi = jumlahDurasi;
     }
 
     void Update()
     {
-        iconSpeedUp.fillAmount = 1*durasi;
+        //iconSpeedUp.fillAmount = 1*durasi;
         durasi -= 1*Time.deltaTime;
         if(durasi < 0)
         {
@@ -30,7 +30,7 @@ public class BallController : MonoBehaviour
 
     public void ResetBall()
     {
-        transform.position = new Vector3(resetPosition.x, resetPosition.y, 0);
+        transform.position = new Vector3(resetPosition.x, resetPosition.y, resetPosition.z);
     }
 
     public void ActivatePUSpeedUp(float magnitude)

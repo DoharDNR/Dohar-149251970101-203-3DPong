@@ -6,7 +6,7 @@ public class PULongPaddle : MonoBehaviour
 {
     public PowerUpManager manager;
     public Collider2D ball;
-    public PaddleController paddlePlayer, paddlePlayer2;
+    public PaddleControllerLR paddlePlayer, paddlePlayer2;
     public int countLong;
 
     private void OnTriggerEnter2D(Collider2D collision)

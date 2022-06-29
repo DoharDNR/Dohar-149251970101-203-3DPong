@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class PaddleController : MonoBehaviour
+public class PaddleControllerUD : MonoBehaviour
 {
     public int speed;
     public KeyCode upKey;
     public KeyCode downKey;
-    private Rigidbody2D rig;
+    private Rigidbody rig;
 
     public bool isActive;
     public int jumlahDurasi;
@@ -13,7 +13,7 @@ public class PaddleController : MonoBehaviour
 
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
+        rig = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -27,25 +27,25 @@ public class PaddleController : MonoBehaviour
         {
             durasi = 0;
             isActive = false;
-            transform.localScale = new Vector2(1, 3);
+            transform.localScale = new Vector3(1, 3);
             speed = 5;
         }
     }
 
-    private Vector2 GetInput()
+    private Vector3 GetInput()
     {
         if (Input.GetKey(upKey))
         {
-            return Vector2.up * speed;
+            return Vector3.forward * speed;
         } else if (Input.GetKey(downKey))
         {
-            return Vector2.down * speed;
+            return Vector3.back * speed;
         }
 
-        return Vector2.zero;
+        return Vector3.zero;
     }
 
-    private void MoveObject(Vector2 movement)
+    private void MoveObject(Vector3 movement)
     {
         rig.velocity = movement;
     }
@@ -56,7 +56,7 @@ public class PaddleController : MonoBehaviour
         durasi = jumlahDurasi;
         if (isActive)
         {
-            transform.localScale = new Vector2(1, 3 * countLong);
+            transform.localScale = new Vector3(1, 3 * countLong);
         }
     }
 
