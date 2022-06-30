@@ -361,7 +361,6 @@ GameObject:
   - component: {fileID: 276726195}
   - component: {fileID: 276726194}
   - component: {fileID: 276726193}
-  - component: {fileID: 276726197}
   m_Layer: 0
   m_Name: MasukBola3
   m_TagString: Untagged
@@ -441,29 +440,11 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.3826837, z: -0, w: 0.9238795}
   m_LocalPosition: {x: 0.45, y: 2, z: 0.45}
   m_LocalScale: {x: 0.1, y: 2, z: 0.05}
-  m_Children: []
+  m_Children:
+  - {fileID: 795904154}
   m_Father: {fileID: 1641894741}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &276726197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276726192}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68473162d7f9d4e40a887939f2852b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballController: {fileID: 0}
-  jumlahBola: 0
-  durasiSpawn: 5
-  durasi: 0
-  spawnBall: {fileID: 0}
-  ballObj: {fileID: 0}
-  readyToStart: {x: 0, y: 0, z: 0}
 --- !u!1 &375986445
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +538,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &418479750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418479751}
+  m_Layer: 0
+  m_Name: PointKeluarBola2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418479751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418479750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1503127202}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472451767
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +580,6 @@ GameObject:
   - component: {fileID: 472451770}
   - component: {fileID: 472451769}
   - component: {fileID: 472451768}
-  - component: {fileID: 472451772}
   m_Layer: 0
   m_Name: MasukBola4
   m_TagString: Untagged
@@ -649,29 +659,11 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.3826837, z: -0, w: 0.9238795}
   m_LocalPosition: {x: -0.45, y: 2, z: 0.45}
   m_LocalScale: {x: 0.05, y: 2, z: 0.1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1718537253}
   m_Father: {fileID: 1641894741}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &472451772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472451767}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68473162d7f9d4e40a887939f2852b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballController: {fileID: 0}
-  jumlahBola: 5
-  durasiSpawn: 5
-  durasi: 0
-  spawnBall: {fileID: 0}
-  ballObj: {fileID: 0}
-  readyToStart: {x: 0, y: 0, z: 0}
 --- !u!1 &483600865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +994,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521391890}
-  m_Material: {fileID: 13400000, guid: cf3b0e9ea613c0a4f97a3497977d5a33, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1564,10 +1556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92de1af20c0d5ee4591524df38759ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 8206641618309041593}
-  isRight: 1
-  manager: {fileID: 1496826407}
---- !u!1 &876952980
+--- !u!1 &795904153
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1575,48 +1564,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 876952981}
-  - component: {fileID: 876952982}
+  - component: {fileID: 795904154}
   m_Layer: 0
-  m_Name: KeluarBola
+  m_Name: PointKeluarBola3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &876952981
+--- !u!4 &795904154
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876952980}
+  m_GameObject: {fileID: 795904153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000026077032, y: 0, z: 1.2500001}
+  m_LocalPosition: {x: 0, y: 0, z: -1.4}
   m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1895600023}
+  m_Father: {fileID: 276726196}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &876952982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876952980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68473162d7f9d4e40a887939f2852b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballController: {fileID: 0}
-  jumlahBola: 5
-  durasiSpawn: 5
-  durasi: 0
-  spawnBall: {fileID: 876952981}
-  ballObj: {fileID: 5389040868454677063, guid: 5ff2b7adf001ba648928a29f8947a5f1, type: 3}
-  readyToStart: {x: 4, y: 0, z: 8}
 --- !u!1 &924531666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,8 +1996,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46cf98fc4c360ca4db8586c02e9e6867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skorKiri: {fileID: 1370954718}
-  skorKanan: {fileID: 924531668}
+  skorPemain1: {fileID: 0}
+  skorPemain2: {fileID: 0}
+  skorPemain3: {fileID: 0}
+  skorPemain4: {fileID: 0}
   manager: {fileID: 1496826407}
 --- !u!1 &1139520520
 GameObject:
@@ -2343,7 +2314,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275436889}
-  m_Material: {fileID: 13400000, guid: cf3b0e9ea613c0a4f97a3497977d5a33, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2973,7 +2944,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452506256}
-  m_Material: {fileID: 13400000, guid: cf3b0e9ea613c0a4f97a3497977d5a33, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3071,10 +3042,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8907750fb40a513439dfee845c65625c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightScore: 0
-  leftScore: 0
+  pemain1Score: 0
+  pemain2Score: 0
+  pemain3Score: 0
+  pemain4Score: 0
+  pemain1Obj: {fileID: 0}
+  pemain2Obj: {fileID: 0}
+  pemain3Obj: {fileID: 0}
+  pemain4Obj: {fileID: 0}
+  isPemain1: 0
+  isPemain2: 0
+  isPemain3: 0
+  isPemain4: 0
   maxScore: 5
-  ball: {fileID: 8206641618309041597}
+  jumlahPemain: 4
 --- !u!4 &1496826408
 Transform:
   m_ObjectHideFlags: 0
@@ -3109,7 +3090,6 @@ GameObject:
   - component: {fileID: 1503127201}
   - component: {fileID: 1503127200}
   - component: {fileID: 1503127199}
-  - component: {fileID: 1503127203}
   m_Layer: 0
   m_Name: MasukBola2
   m_TagString: Untagged
@@ -3189,29 +3169,11 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.3826837, z: -0, w: 0.9238795}
   m_LocalPosition: {x: 0.45, y: 2, z: -0.45}
   m_LocalScale: {x: 0.05, y: 2, z: 0.1}
-  m_Children: []
+  m_Children:
+  - {fileID: 418479751}
   m_Father: {fileID: 1641894741}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!114 &1503127203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503127198}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68473162d7f9d4e40a887939f2852b96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ballController: {fileID: 0}
-  jumlahBola: 0
-  durasiSpawn: 5
-  durasi: 0
-  spawnBall: {fileID: 0}
-  ballObj: {fileID: 0}
-  readyToStart: {x: 0, y: 0, z: 0}
 --- !u!1 &1543148172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3360,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624921023}
-  m_Material: {fileID: 13400000, guid: cf3b0e9ea613c0a4f97a3497977d5a33, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3479,6 +3441,8 @@ GameObject:
   - component: {fileID: 1641894740}
   - component: {fileID: 1641894739}
   - component: {fileID: 1641894738}
+  - component: {fileID: 1641894742}
+  - component: {fileID: 1641894743}
   m_Layer: 0
   m_Name: AreaPertandingan3D
   m_TagString: Untagged
@@ -3567,10 +3531,60 @@ Transform:
   - {fileID: 1503127202}
   - {fileID: 276726196}
   - {fileID: 472451771}
-  - {fileID: 2084997978}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641894742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641894737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8907750fb40a513439dfee845c65625c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pemain1Score: 0
+  pemain2Score: 0
+  pemain3Score: 0
+  pemain4Score: 0
+  pemain1Obj: {fileID: 486847397}
+  pemain2Obj: {fileID: 1014479962}
+  pemain3Obj: {fileID: 774726248}
+  pemain4Obj: {fileID: 1733546568}
+  isPemain1: 1
+  isPemain2: 1
+  isPemain3: 1
+  isPemain4: 1
+  maxScore: 5
+  jumlahPemain: 4
+--- !u!114 &1641894743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641894737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68473162d7f9d4e40a887939f2852b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballController: {fileID: 5389040868454677057, guid: 5ff2b7adf001ba648928a29f8947a5f1, type: 3}
+  jumlahBola: 5
+  durasiSpawn: 5
+  durasi: 0
+  isSpawnBall1: 0
+  isSpawnBall2: 0
+  isSpawnBall3: 0
+  isSpawnBall4: 0
+  spawnBall1: {fileID: 2084997978}
+  spawnBall2: {fileID: 418479751}
+  spawnBall3: {fileID: 795904154}
+  spawnBall4: {fileID: 1718537253}
+  ballObj: {fileID: 5389040868454677063, guid: 5ff2b7adf001ba648928a29f8947a5f1, type: 3}
 --- !u!1 &1692304822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,6 +3710,36 @@ MonoBehaviour:
   manager: {fileID: 170232354}
   ball: {fileID: 8206641618309041593}
   magnitude: 2
+--- !u!1 &1718537252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1718537253}
+  m_Layer: 0
+  m_Name: PointKeluarBola4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1718537253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718537252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 472451771}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733546568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3994,7 +4038,7 @@ Transform:
   m_LocalPosition: {x: -0.45, y: 2, z: -0.45}
   m_LocalScale: {x: 0.1, y: 2, z: 0.05}
   m_Children:
-  - {fileID: 876952981}
+  - {fileID: 2084997978}
   m_Father: {fileID: 1641894741}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
@@ -4038,7 +4082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2084997978}
   m_Layer: 0
-  m_Name: PointKeluarBola
+  m_Name: PointKeluarBola1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4052,11 +4096,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084997977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 2, z: -0.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.4}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1641894741}
-  m_RootOrder: 8
+  m_Father: {fileID: 1895600023}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2144610387
 GameObject:
@@ -4180,9 +4224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92de1af20c0d5ee4591524df38759ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 8206641618309041593}
-  isRight: 0
-  manager: {fileID: 1496826407}
 --- !u!1 &8206641618309041592
 GameObject:
   m_ObjectHideFlags: 0
@@ -4250,6 +4291,16 @@ MonoBehaviour:
   iconSpeedUp: {fileID: 1864784065}
   jumlahDurasi: 5
   durasi: 0
+  dinding1: {fileID: 0}
+  dinding2: {fileID: 0}
+  dinding3: {fileID: 0}
+  dinding4: {fileID: 0}
+  dindingCol1: {fileID: 0}
+  dindingCol2: {fileID: 0}
+  dindingCol3: {fileID: 0}
+  dindingCol4: {fileID: 0}
+  scoreObj: {fileID: 0}
+  scoreManager: {fileID: 0}
 --- !u!50 &8206641618309041598
 Rigidbody2D:
   serializedVersion: 4

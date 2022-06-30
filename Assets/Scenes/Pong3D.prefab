@@ -91,7 +91,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5389040868454677063}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cf3b0e9ea613c0a4f97a3497977d5a33, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -130,3 +130,13 @@ MonoBehaviour:
   iconSpeedUp: {fileID: 0}
   jumlahDurasi: 0
   durasi: 0
+  dinding1: {fileID: 0}
+  dinding2: {fileID: 0}
+  dinding3: {fileID: 0}
+  dinding4: {fileID: 0}
+  dindingCol1: {fileID: 0}
+  dindingCol2: {fileID: 0}
+  dindingCol3: {fileID: 0}
+  dindingCol4: {fileID: 0}
+  scoreObj: {fileID: 0}
+  scoreManager: {fileID: 0}

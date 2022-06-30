@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class ScoreController : MonoBehaviour
 {
-    public Text skorKiri;
-    public Text skorKanan;
+    public Text skorPemain1;
+    public Text skorPemain2;
+    public Text skorPemain3;
+    public Text skorPemain4;
 
     public ScoreManager manager;
 
     private void Update()
     {
-        skorKiri.text = manager.leftScore.ToString();
-        skorKanan.text = manager.rightScore.ToString();
+        skorPemain1.text = manager.pemain1Score.ToString();
+        skorPemain2.text = manager.pemain2Score.ToString();
+        skorPemain3.text = manager.pemain3Score.ToString();
+        skorPemain4.text = manager.pemain4Score.ToString();
     }
 }
