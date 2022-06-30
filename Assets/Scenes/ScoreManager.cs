@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     public int pemain1Score, pemain2Score, pemain3Score, pemain4Score;
-    public GameObject pemain1Obj, pemain2Obj, pemain3Obj, pemain4Obj;
+    public GameObject pemain1Obj, pemain2Obj, pemain3Obj, pemain4Obj, gameOverObj;
     public bool isPemain1, isPemain2, isPemain3, isPemain4;
+    public string namaPemenang;
 
     public int maxScore;
     public int jumlahPemain = 4;
@@ -72,7 +73,28 @@ public class ScoreManager : MonoBehaviour
         if(jumlahPemain == 1)
         {
             gameObject.SetActive(false);
+            gameOverObj.SetActive(true);
         }
+
+        if (isPemain1)
+        {
+            namaPemenang = pemain1Obj.name;
+        } else if (isPemain2)
+        {
+            namaPemenang = pemain2Obj.name;
+        } else if (isPemain3)
+        {
+            namaPemenang = pemain3Obj.name;
+        }
+        else
+        {
+            namaPemenang = pemain4Obj.name;
+        }
+    }
+
+    public void MainLagi()
+    {
+        SceneManager.LoadScene("PermainanPong");
     }
 
     public void GameOver()

@@ -5,16 +5,10 @@ public class PaddleControllerLR : MonoBehaviour
     public int speed;
     public KeyCode leftKey;
     public KeyCode rightKey;
-    private Rigidbody rig;
 
     public bool isActive;
     public int jumlahDurasi;
     public float durasi;
-
-    void Start()
-    {
-        rig = GetComponent<Rigidbody>();
-    }
 
     void Update()
     {
@@ -36,18 +30,22 @@ public class PaddleControllerLR : MonoBehaviour
     {
         if (Input.GetKey(leftKey))
         {
-            return Vector3.left * speed;
+            return Vector3.left * speed *Time.deltaTime;
+            if(transform.position.x > 4)
+            {
+                ;
+            }
 
         } else if (Input.GetKey(rightKey))
         {
-            return Vector3.right * speed;
+            return Vector3.right * speed *Time.deltaTime;
         }
         return Vector3.zero;
     }
 
     private void MoveObject(Vector3 movement)
     {
-        rig.velocity = movement;
+        transform.Translate(movement.x, movement.y, movement.z);
     }
 
     public void ActivatePULongPaddle(float countLong)

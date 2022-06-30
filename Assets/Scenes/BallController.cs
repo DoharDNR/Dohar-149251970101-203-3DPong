@@ -30,7 +30,7 @@ public class BallController : MonoBehaviour
         {
             scoreManager.AddPemain3Score(1);
         }
-        else
+        else if(other.collider == dindingCol4)
         {
             scoreManager.AddPemain4Score(1);
         }

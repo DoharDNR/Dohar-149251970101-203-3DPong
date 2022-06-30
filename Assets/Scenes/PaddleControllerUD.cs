@@ -5,20 +5,14 @@ public class PaddleControllerUD : MonoBehaviour
     public int speed;
     public KeyCode upKey;
     public KeyCode downKey;
-    private Rigidbody rig;
 
     public bool isActive;
     public int jumlahDurasi;
     public float durasi;
 
-    void Start()
-    {
-        rig = GetComponent<Rigidbody>();
-    }
-
     void Update()
     {
-        MoveObject(GetInput());
+        MoveObject();
         if (isActive)
         {
             durasi -= 1 * Time.deltaTime;
@@ -32,22 +26,13 @@ public class PaddleControllerUD : MonoBehaviour
         }
     }
 
-    private Vector3 GetInput()
+    private void MoveObject()
     {
         if (Input.GetKey(upKey))
         {
-            return Vector3.forward * speed;
         } else if (Input.GetKey(downKey))
         {
-            return Vector3.back * speed;
         }
-
-        return Vector3.zero;
-    }
-
-    private void MoveObject(Vector3 movement)
-    {
-        rig.velocity = movement;
     }
 
     public void ActivatePULongPaddle(float countLong)
