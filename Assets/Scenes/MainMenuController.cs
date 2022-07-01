@@ -14,4 +14,9 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("CreditScene");
         Debug.Log("Created By DoharSiregar - 149251970101-203");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
