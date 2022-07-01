@@ -10,9 +10,11 @@ public class PaddleControllerLR : MonoBehaviour
     public int jumlahDurasi;
     public float durasi;
 
+    float cameraPitch;
+
     void Update()
     {
-        MoveObject(GetInput());
+        MoveObject();
         if (isActive)
         {
             durasi -= 1 * Time.deltaTime;
@@ -26,26 +28,21 @@ public class PaddleControllerLR : MonoBehaviour
         }
     }
 
-    private Vector3 GetInput()
+    void MoveObject()
     {
         if (Input.GetKey(leftKey))
         {
-            return Vector3.left * speed *Time.deltaTime;
-            if(transform.position.x > 4)
-            {
-                ;
-            }
-
+            float moveLeft = speed * Time.deltaTime;
+            float rawPos = transform.position.x - moveLeft;
+            float clampPos = Mathf.Clamp(rawPos, -4, 4);
+            transform.position = new Vector3(clampPos, transform.position.y, transform.position.z);
         } else if (Input.GetKey(rightKey))
         {
-            return Vector3.right * speed *Time.deltaTime;
+            float moveLeft = speed * Time.deltaTime;
+            float rawPos = transform.position.x + moveLeft;
+            float clampPos = Mathf.Clamp(rawPos, -4, 4);
+            transform.position = new Vector3(clampPos, transform.position.y, transform.position.z);
         }
-        return Vector3.zero;
-    }
-
-    private void MoveObject(Vector3 movement)
-    {
-        transform.Translate(movement.x, movement.y, movement.z);
     }
 
     public void ActivatePULongPaddle(float countLong)

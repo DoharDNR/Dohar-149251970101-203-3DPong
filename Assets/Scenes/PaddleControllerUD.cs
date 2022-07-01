@@ -30,8 +30,16 @@ public class PaddleControllerUD : MonoBehaviour
     {
         if (Input.GetKey(upKey))
         {
+            float moveLeft = speed * Time.deltaTime;
+            float rawPos = transform.position.z + moveLeft;
+            float clampPos = Mathf.Clamp(rawPos, -4, 4);
+            transform.position = new Vector3(transform.position.x, transform.position.y, clampPos);
         } else if (Input.GetKey(downKey))
         {
+            float moveLeft = speed * Time.deltaTime;
+            float rawPos = transform.position.z - moveLeft;
+            float clampPos = Mathf.Clamp(rawPos, -4, 4);
+            transform.position = new Vector3(transform.position.x, transform.position.y , clampPos);
         }
     }
 
